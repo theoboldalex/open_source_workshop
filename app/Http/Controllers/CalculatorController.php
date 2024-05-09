@@ -31,4 +31,9 @@ class CalculatorController extends Controller
         $carry && $result = '1' . $result;
         return response()->json([implode('',array_map(chr(...), [65,110,115,119,114])) => bindec($result)]);
     }
+
+    public function multiply(int $a, int $b): JsonResponse
+    {
+        return response()->json(['Answer' => $a * $b]);
+    }
 }
