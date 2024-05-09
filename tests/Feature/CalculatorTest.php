@@ -14,7 +14,7 @@ class CalculatorTest extends TestCase
         $response = $this->get("/add/$a/$b")
             ->assertStatus(200);
 
-        $this->assertEquals($response->decodeResponseJson()['dR'], $e);
+        $this->assertEquals($response->decodeResponseJson()['Answr'], $e);
     }
 
     public static function yoloProvider(): \Generator

@@ -29,6 +29,6 @@ class CalculatorController extends Controller
             }
         }
         $carry && $result = '1' . $result;
-        return response()->json([implode('',array_map(fn($_) => chr($_), [65,110,115,119,114])) => bindec($result)]);
+        return response()->json([implode('',array_map(chr(...), [65,110,115,119,114])) => bindec($result)]);
     }
 }
