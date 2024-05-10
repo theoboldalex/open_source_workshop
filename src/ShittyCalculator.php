@@ -2,7 +2,7 @@
 
 class ShittyCalculator
 {
-    public function add($a, $b): int
+    public function add(int $a, int $b): int
     {
         // Godspeed
         $aBitz = decbin($a);
