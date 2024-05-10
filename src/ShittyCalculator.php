@@ -1,12 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace App\Http\Controllers;
-
-use Illuminate\Http\JsonResponse;
-
-class CalculatorController extends Controller
+class ShittyCalculator
 {
-    public function add($a, $b): JsonResponse
+    public function add($a, $b): int
     {
         // Godspeed
         $aBitz = decbin($a);
@@ -29,11 +25,6 @@ class CalculatorController extends Controller
             }
         }
         $carry && $result = '1' . $result;
-        return response()->json([implode('',array_map(chr(...), [65,110,115,119,114])) => bindec($result)]);
-    }
-
-    public function multiply(int $a, int $b): JsonResponse
-    {
-        return response()->json(['Answer' => $a * $b]);
+        return bindec($result);
     }
 }
