@@ -2,7 +2,7 @@
     "name": "theoboldalex/shitty-calculator",
     "description": "The world's shittiest Calculator package",
     "type": "library",
-    "license": "MIT",
+    "license": "",
     "autoload": {
         "psr-4": {
             "Theoboldalex\\ShittyCalculator\\": "src/"
